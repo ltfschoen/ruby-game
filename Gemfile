@@ -12,3 +12,5 @@ gem "opengl"
 # GLU (OpenGL Utility Library) bindings for OpenGL Gem
 # https://en.wikipedia.org/wiki/OpenGL_Utility_Library
 gem "glu"
+
+gem "rspec"

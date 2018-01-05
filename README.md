@@ -37,3 +37,18 @@
     * Note: Store Objects in ./objects Folder.
   * Create Lines and Set Line Colours
   * Draw the Lines from main.rb using the GLU (OpenGL Utility Library)
+  * Add Player class to store the x, y translation to move the player
+
+* Add RSpec
+  * Add RSpec to Gemfile
+  * Initialise RSpec 
+    ```
+    rspec --init
+    ```
+  * Install dependency
+    ```
+    bundle install
+    ```
+  * Add Tests
+
+* Experiment with Matrix - http://ruby-doc.org/stdlib-2.4.2/libdoc/matrix/rdoc/Matrix.html
