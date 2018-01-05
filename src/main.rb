@@ -2,6 +2,7 @@ require 'opengl'
 require 'glu'
 require 'gosu'
 require_relative './media/axis.rb'
+require_relative './objects/player.rb'
 include Gl, Glu
 
 class Window < Gosu::Window
@@ -12,6 +13,10 @@ class Window < Gosu::Window
   def initialize
     super 640, 480
     self.caption = "Game in OpenGL"
+    print("Generating #{width}x#{height} Game Window")
+    x_center = width/2
+    y_center = height/2
+    @player = Player.new(x_center, y_center)
   end
   
   # Override method defined by Gosu::Window
@@ -39,7 +44,12 @@ class Window < Gosu::Window
         # to produce a Translation by x, y, z, and where x, y, z are 
         # the Coordinates of Translation Vector
         # https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glTranslate.xml
-        glTranslated(width/2, height/2, 0)
+        glTranslated(@player.x, @player.y, 0)
+        # Translate toward bottom right of screen
+        x_translate = 100
+        y_translate = 100
+        @player.move_by_pixels(x_translate, y_translate)
+        glTranslated(x_translate, y_translate, 0)
         Axis.draw(100, 100, 100)
       # Restore Untranslated Coordinate System
       glPopMatrix
