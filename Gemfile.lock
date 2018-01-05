@@ -1,13 +1,17 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    glu (8.3.0)
     gosu (0.13.1)
+    opengl (0.10.0)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  glu
   gosu
+  opengl
 
 BUNDLED WITH
    1.16.0

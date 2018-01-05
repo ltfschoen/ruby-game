@@ -17,7 +17,7 @@
     ruby -rgosu -e 'w = Gosu::Window.new(200, 150); w.caption = "It works!"; w.show'
     ```
 
-* Create Basic Ruby Game
+* Create Basic Ruby Game Window
   * Read Gosu [Wiki Ruby Tutorial](https://github.com/gosu/gosu/wiki/Ruby-Tutorial)
   * Create Gemfile with Gosu dependency and install
     ```
@@ -28,3 +28,12 @@
     ```
     bundle exec ruby src/main.rb
     ```
+
+* Add OpenGL
+  * Reference: 
+    * OpenGL Guide - http://www.diatomenterprises.com/different-sides-of-ruby-development-opengl/
+    * OpenGL Official Documentation - https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/
+  * Create Axis Class in ./media/axis.rb to Draw Coordinates on 3D Grid
+    * Note: Store Objects in ./objects Folder.
+  * Create Lines and Set Line Colours
+  * Draw the Lines from main.rb using the GLU (OpenGL Utility Library)
